@@ -1,46 +1,32 @@
 
-let homeEL = document.getElementById("home-el")
-let awayEL = document.getElementById("away-el")
-let hScore = 0
+const homeEL = document.querySelector("#home-score")
+const awayEL = document.querySelector("#away-score")
+let homeS = 0
+let awayS = 0
 
-function home2() {  
-    hScore = hScore + 2
-    homeEL.textContent = "Home: " + hScore
+function score(team, num) {
+
+    if (team === "home") {
+        if (num === 0) {
+            homeS = 0
+      } if (num > 0) {
+        homeS += num
+      } if (num < 0 && homeS > 0) {
+            homeS += -1
+      }   
+        homeEL.textContent = "Home: " + homeS
+        
+    } else if (team === "away") {
+        if (num === 0) {
+            awayS = 0
+      } if (num > 0) {
+        awayS += num
+      } if (num === -1 && awayS > 0) {
+            awayS += -1
+      }   
+        awayEL.textContent = "Away: " + awayS
+    }
 }
 
-function home3() {  
-    hScore = hScore + 3
-    homeEL.textContent = "Home: " + hScore
-}
 
-function homeDown() {
-    if(hScore >= 1)  
-    hScore = hScore - 1
-    homeEL.textContent = "Home: " + hScore
-}
 
-function homeClear() {  
-    hScore = 0
-    homeEL.textContent = "Home: " + hScore
-}
-
-function away2() {  
-    hScore = hScore + 2
-    awayEL.textContent = "Away: " + hScore 
-}
-
-function away3() {  
-    hScore = hScore + 3
-    awayEL.textContent = "Away: " + hScore
-}
-
-function awayDown() {  
-    if(hScore >= 1) 
-    hScore = hScore - 1
-    awayEL.textContent = "Away: " + hScore
-}
-
-function awayClear() {  
-    hScore = 0
-    awayEL.textContent = "Away: " + hScore
-}

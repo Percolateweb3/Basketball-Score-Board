@@ -1,29 +1,26 @@
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
+    <head>
+        <link rel="stylesheet"
+        href="index.css" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     </head>
     <body>
-        <br>
-   <span id="home-el">Home: 0</span>
-        <br>
-        <br>
-        <button id="home-btn" onclick="home2()">+2</button>
-        <button id="home-btn" onclick="home3()">+3</button> 
-        <button id="homeDown-btn" onclick="homeDown()">-1</button>
-        <button id="homeClear-btn" onclick="homeClear()">Clear</button>
-        <br>
-        <br>
-        <br>
-        <span id="away-el">Away: 0</span>
-        <br>
-        <br>
-        <button id="away-btn" onclick="away2()">+2</button>
-        <button id="away-btn" onclick="away3()">+3</button>
-        <button id="awayDown-btn" onclick="awayDown()">-1</button>
-        <button id="awayClear-btn" onclick="awayClear()">Clear</button>
-        <br>
-        <script src="index.js">
-        
-        </script>
+            <h2 id="home-score">Home: 0</h2>
+         <div class="score-container">
+             <div>
+            <button class="home-btn" id="home2-btn" onclick="score('home', 2)">+2</button>
+            <button class="home-btn" id="home3-btn" onclick="score('home', 3)">+3</button> 
+            <button class="down-btn" id="home3-btn" onclick="score('home', -1)">-1</button>
+            <button class="clear-btn" id="homeC-btn" onclick="score('home', 0)">Clear</button>
+            </div>
+         </div>
+            <h2 id="away-score">Away: 0</h2>
+         <div class="score-container">
+            <button class="away-btn" id="away2-btn" onclick="score('away', 2)">+2</button>
+            <button class="away-btn" id="away3-btn" onclick="score('away', 3)">+3</button>
+            <button class="down-btn" id="awayC-btn" onclick="score('away', -1)">-1</button>
+            <button class="clear-btn" id="awayD-btn" onclick="score('away', 0)">Clear</button>
+        </div>
+        <script src="index.js"></script>
     </body>
 </html>
